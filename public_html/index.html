@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+-->
+ 
+<html>
+    
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/jquery.imagemapster.min.js"></script>
+          
+  
+       
+ 
+ 
+        
+
+         <!--
+         I, Viren Patel, student number 000381431, certify that this material is my
+// original work. No other person's work has been used without due
+// acknowledgement and I have not made my work available to anyone else
+        
+        
+               -->
+              
+        <script>
+            
+   
+            var xerf = {
+                hamilton:"Hamilton,Ontario"  + "<br />" + "population:23,000",
+                dundas:"Dundas,Ontario" + "<br />" + "population:25,000",
+                ancaster:"Ancaster,Ontario" + "<br />" + "Population:2,00,000",
+                flam:"Flambourgh,Ontario" + "<br />" + "popuation:20,000",
+                glan:"Glanbourgh,Ontario" + "<br />" + "population:34,777",
+                stoneycreek:"Stoney Creek,Ontario" + "<br />" + "population:4,50,000"
+                
+            }
+            
+            $(document).ready(function(){
+                $("#mymap").mapster({
+                    fillColor:'ff0000',
+                    fillOpacity:0.3,
+                   singleSelect: true,
+                    mapKey: 'Id',
+                    render_select:{
+                         fillOpacity:0.3,
+                         fillColor:'ff000c',
+                    },
+                    
+                    
+                 onClick: function (e) {
+                     
+                     $("#p1").html(xerf[e.key])
+                              //  if(e.key === 'Hamilton'){
+                //            alert("Hamilton,Ontario")
+                      //  }
+                    }
+                });
+            });
+        </script>
+         <style>
+            #mymap{
+        max-width: 100%;
+              
+            }
+         
+         </style>
+    
+    
+        <h1>The Cities of Hamilton</h1>
+        <img src ="img/equity.png" alt ="Map of Hamilton" id="mymap" usemap="#map">
+         
+        <map name="map" id="map">
+           
+  
+            <area id = "flam" alt=""  href="#" shape="poly"  coords="1077,434,1248,435,1250,264,1078,266" />
+       <area id = "my1" alt=""  href="#" shape="rect"  coords="661,204,1542,205" />
+       
+        </map>
+        
+       
+        
+        <h3 id ="p1"></h3>
+        <h4 id="p2"></h4>
+    
+</html>
